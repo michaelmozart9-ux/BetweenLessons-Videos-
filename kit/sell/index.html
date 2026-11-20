@@ -1,0 +1,83 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+@font-face { font-family: "Inter"; font-weight: 900; src: url("/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 800; src: url("/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 700; src: url("/node_modules/@fontsource/inter/files/inter-latin-700-normal.woff2") format("woff2"); }
+html, body { margin: 0; background: #1A120C; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "Inter"; color: #F5EEDC; }
+#gl { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+#vig { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 50%, rgba(0,0,0,.45) 100%); }
+#chip { position: absolute; top: 110px; left: 50%; transform: translateX(-50%); white-space: nowrap; padding: 16px 34px; border-radius: 20px; background: rgba(20,16,12,.9); border: 3px solid #E0A84B; font-weight: 900; font-size: 46px; color: #FFF; }
+#chip b { color: #E0A84B; }
+#phoneWrap { position: absolute; left: 50%; top: 360px; width: 520px; height: 1020px; margin-left: -260px; perspective: 2200px; }
+#phone { position: absolute; inset: 0; border-radius: 74px; background: #0E0B09; box-shadow: 0 40px 90px rgba(0,0,0,.6), inset 0 0 0 10px #2A2420, inset 0 0 0 13px #4A3E33; transform-style: preserve-3d; }
+#screen { position: absolute; left: 26px; right: 26px; top: 26px; bottom: 26px; border-radius: 52px; background: #15110E; overflow: hidden; }
+#notch { position: absolute; top: 18px; left: 50%; width: 150px; height: 34px; margin-left: -75px; border-radius: 20px; background: #000; z-index: 5; }
+.scr { position: absolute; inset: 0; padding: 80px 28px 30px; opacity: 0; zoom: 1.15; }
+.brand { font-weight: 800; font-size: 26px; color: #E0A84B; text-align: center; margin-bottom: 10px; }
+.h { font-weight: 900; font-size: 44px; line-height: 1.1; margin-bottom: 26px; }
+.card { background: #221C17; border-radius: 22px; padding: 22px 24px; margin-bottom: 16px; font-weight: 800; font-size: 32px; border: 3px solid transparent; }
+.card small { display: block; font-weight: 700; font-size: 24px; color: #B9A78E; margin-top: 6px; }
+.card.sel { border-color: #3CB8A3; background: #1C2B27; }
+.search { background: #221C17; border-radius: 18px; padding: 20px 22px; font-weight: 700; font-size: 32px; color: #F5EEDC; margin-bottom: 18px; }
+.search .cur { display: inline-block; width: 3px; height: 34px; background: #E0A84B; vertical-align: middle; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 26px; }
+.pill { min-width: 50px; padding: 12px 14px; border-radius: 999px; background: #221C17; text-align: center; font-weight: 900; font-size: 30px; }
+.pill.on { background: #3CB8A3; color: #08201B; }
+.day { width: 52px; height: 52px; border-radius: 50%; background: #221C17; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 28px; }
+.day.on { background: #3CB8A3; color: #08201B; }
+.lab { font-weight: 700; font-size: 26px; color: #B9A78E; margin-bottom: 12px; }
+.wk { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; font-weight: 800; font-size: 26px; }
+.wk .bar { height: 30px; border-radius: 10px; background: linear-gradient(90deg, #E0A84B, #F08A4B); }
+.wk .rng { color: #B9A78E; font-weight: 700; font-size: 22px; white-space: nowrap; }
+.sess { display: flex; align-items: center; gap: 16px; background: #221C17; border-radius: 18px; padding: 18px 20px; margin-bottom: 12px; font-weight: 800; font-size: 30px; }
+.sess i { width: 12px; height: 46px; border-radius: 6px; display: block; }
+.tempo { margin-top: 18px; text-align: center; font-weight: 900; font-size: 46px; color: #E0A84B; }
+.tempo small { display: block; font-size: 24px; color: #B9A78E; font-weight: 700; }
+.btn { padding: 26px; border-radius: 22px; background: #221C17; text-align: center; font-weight: 900; font-size: 36px; margin-bottom: 16px; border: 3px solid transparent; }
+.btn.hit { background: #3CB8A3; color: #08201B; }
+.toast { margin-top: 20px; padding: 22px; border-radius: 22px; background: #2A2213; border: 3px solid #E0A84B; text-align: center; font-weight: 900; font-size: 34px; opacity: 0; }
+.cal { display: flex; gap: 10px; margin-bottom: 22px; }
+.cal div { flex: 1; height: 110px; border-radius: 16px; background: #221C17; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 900; font-size: 26px; }
+.cal div small { font-size: 34px; margin-top: 6px; }
+.cal .skip { background: #2B1E1E; color: #8A6A6A; }
+.cal .next { background: #1C2B27; border: 3px solid #3CB8A3; }
+.badge { margin-top: 26px; padding: 26px; border-radius: 26px; background: linear-gradient(135deg, #3B2A10, #2A2213); border: 3px solid #E0A84B; text-align: center; font-weight: 900; font-size: 38px; opacity: 0; }
+.check { display: flex; align-items: center; gap: 18px; font-weight: 900; font-size: 40px; margin-bottom: 30px; opacity: 0; }
+.check b { width: 64px; height: 64px; border-radius: 50%; background: #3CB8A3; color: #08201B; display: flex; align-items: center; justify-content: center; font-size: 36px; flex: none; }
+.x { display: flex; align-items: center; gap: 16px; font-weight: 900; font-size: 36px; margin-bottom: 24px; opacity: 0; }
+.x b { color: #FF5A4A; font-size: 44px; }
+#finger { position: absolute; width: 90px; height: 90px; margin: -45px 0 0 -45px; border-radius: 50%; background: rgba(255,255,255,.35); border: 5px solid #FFF; opacity: 0; z-index: 10; }
+#cap { position: absolute; top: 1420px; left: 40px; right: 40px; text-align: center; font-weight: 900; font-size: 70px; line-height: 1.12; color: #FFF; -webkit-text-stroke: 3px rgba(0,0,0,.7); paint-order: stroke fill; text-shadow: 0 6px 24px rgba(0,0,0,.7); }
+#cap .hl { color: #FFD45C; }
+#cta { position: absolute; bottom: 120px; left: 50%; transform: translateX(-50%); white-space: nowrap; padding: 26px 50px; border-radius: 999px; background: #E0A84B; color: #1A120C; font-weight: 900; font-size: 52px; opacity: 0; box-shadow: 0 16px 40px rgba(224,168,75,.45); }
+#cta small { display: block; text-align: center; font-size: 30px; font-weight: 800; margin-top: 4px; color: #3A2A14; }
+#tempo { position: absolute; top: 240px; right: 50px; padding: 14px 26px; border-radius: 18px; background: rgba(20,16,12,.9); border: 3px solid #E0A84B; font-weight: 900; font-size: 56px; color: #FFF; }
+#tempo.bad { border-color: #FF5A4A; color: #FF8A7A; } #tempo.good { border-color: #3CB8A3; color: #8FF0DE; }
+.cheap { margin-top: 20px; padding: 22px; border-radius: 22px; background: #2A2213; border: 3px solid #E0A84B; text-align: center; font-weight: 900; font-size: 36px; opacity: 0; }
+#flash { position: absolute; inset: 0; background: #FFF; opacity: 0; }
+#red { position: absolute; inset: 0; background: #FF2A2A; opacity: 0; mix-blend-mode: multiply; }
+</style></head><body>
+<div id="stage">
+  <canvas id="gl" width="720" height="1280"></canvas>
+  <div id="vig"></div>
+  <div id="chip"></div><div id="tempo">100%</div>
+  <div id="phoneWrap"><div id="phone"><div id="notch"></div><div id="screen">
+    <div class="scr" id="s3b"><div class="brand">Today · 30 min</div><div class="h">Your piece, the hard bit</div>
+      <div class="sess"><i style="background:#E0A84B"></i>Warm-up</div><div class="sess"><i style="background:#3CB8A3"></i>Main work</div><div class="sess"><i style="background:#F08A4B"></i>Run-through</div>
+      <div class="tempo">Tempo target: 40%<small>slow first. on purpose.</small></div></div>
+    <div class="scr" id="s4"><div class="brand">Session done ✅</div><div class="h">How did it feel?</div>
+      <div class="btn" id="be">Too easy 😎</div><div class="btn">Just right 👌</div><div class="btn">Too hard 😵</div>
+      <div class="toast" id="toast">Next session: 5% faster ⚡</div></div>
+    <div class="scr" id="s6"><div class="brand">Between Lessons</div><div class="h">Try it. Risk-free.</div>
+      <div class="check"><b>✓</b>Day 1 free · no card</div><div class="check"><b>✓</b>€17 once · no subscription</div><div class="check"><b>✓</b>7-day money-back</div>
+      <div class="cheap">💸 Less than one piano lesson</div></div>
+    <div id="finger"></div>
+  </div></div></div>
+  <div id="cap"></div>
+  <div id="cta">Try Day 1 free 👉<small>betweenlessons.org</small></div>
+  <div id="red"></div><div id="flash"></div>
+</div>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+<script type="module" src="./scene.js"></script>
+</body></html>
