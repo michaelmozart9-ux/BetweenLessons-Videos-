@@ -1,6 +1,9 @@
 # Posted videos (newest first). The daily run reads this to avoid repeating formats.
 | Date made | Format | Title | Project dir |
 |---|---|---|---|
+| 2026-11-20 | cartoon (hard bar: Max vs Zoe, Too hard = 5% slower) · Minuet in G | The hard bar: Max vs Zoe 😩🐢 #shorts | c3 |
+| 2026-11-20 | but epic (lv) · Hall of the Mountain King | In the Hall of the Mountain King but it gets EPIC 🔥 | hk |
+| 2026-11-20 | pedal: none vs too much vs right (lv) · Gymnopédie No. 1 | No pedal vs TOO much pedal 😬 Gymnopédie No. 1 | gp |
 | 2026-11-16 | cartoon series (3 types part 3) | 3 types of piano students PART 3 😭 #shorts | p3 |
 | 2026-11-16 | gets harder (lv) | Mary Had a Little Lamb but it gets HARDER 🎹 | ml2 |
 | 2026-11-16 | guess the grade (gtg) | Guess the grade: Für Elise 🎹 Grade 1 to 8 | fe |
