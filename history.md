@@ -1,6 +1,9 @@
 # Posted videos (newest first). The daily run reads this to avoid repeating formats.
 | Date made | Format | Title | Project dir |
 |---|---|---|---|
+| 2026-11-21 | cartoon (missed a day: Max crams vs Zoe's plan waits) · Ode to Joy | Missed a practice day? Max vs Zoe 😱 #shorts | c4 |
+| 2026-11-21 | guess the song (lv) · Twinkle, Canon in D, Eine kleine Nachtmusik, Flight of the Bumblebee | Guess the song #4: Easy → Impossible 💀 #shorts | g4 |
+| 2026-11-21 | same melody, 4 left hands (lv) · Greensleeves | Same melody, 4 left hands: Greensleeves 🎹 #shorts | lh |
 | 2026-11-20 | cartoon (hard bar: Max vs Zoe, Too hard = 5% slower) · Minuet in G | The hard bar: Max vs Zoe 😩🐢 #shorts | c3 |
 | 2026-11-20 | but epic (lv) · Hall of the Mountain King | In the Hall of the Mountain King but it gets EPIC 🔥 | hk |
 | 2026-11-20 | pedal: none vs too much vs right (lv) · Gymnopédie No. 1 | No pedal vs TOO much pedal 😬 Gymnopédie No. 1 | gp |
