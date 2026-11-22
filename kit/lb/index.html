@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+@font-face { font-family: "Inter"; font-weight: 900; src: url("/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 800; src: url("/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 700; src: url("/node_modules/@fontsource/inter/files/inter-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cormorant"; font-weight: 700; src: url("/node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-700-normal.woff2") format("woff2"); }
+html, body { margin: 0; background: #0E0C0A; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #0E0C0A; font-family: "Inter"; }
+#gl { position: absolute; inset: 0; }
+#topfade { position: absolute; left: 0; right: 0; top: 0; height: 760px; background: linear-gradient(rgba(20,13,8,.92) 0%, rgba(20,13,8,.6) 55%, rgba(20,13,8,0) 100%); }
+#vig { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 55%, rgba(0,0,0,0) 65%, rgba(0,0,0,.35) 100%); }
+#dim { position: absolute; left: 0; right: 0; top: 0; height: 1250px; background: linear-gradient(rgba(14,10,7,.9) 0%, rgba(14,10,7,.82) 70%, rgba(14,10,7,0) 100%); opacity: 0; }
+#flash { position: absolute; inset: 0; background: #FFF4DC; opacity: 0; }
+.hl { color: #E0A84B; }
+#title { position: absolute; top: 110px; left: 30px; right: 30px; text-align: center; transform-origin: 50% 0; text-shadow: 0 6px 26px rgba(0,0,0,.85); }
+#piece { font-weight: 800; font-size: 50px; color: #F2C66B; }
+#title .q { margin-top: 4px; font-weight: 900; font-size: 94px; white-space: nowrap; line-height: 1; color: #F5EEDC; }
+#badge { position: absolute; top: 330px; left: 0; right: 0; text-align: center; opacity: 0; }
+#let { display: inline-block; font-weight: 900; font-size: 240px; line-height: .95; color: #F6E7C4; text-shadow: 0 2px 0 #E0A84B, 0 4px 0 #D49C43, 0 6px 0 #C8913C, 0 8px 0 #B98434, 0 10px 0 #A9742B, 0 12px 0 #946424, 0 26px 50px rgba(0,0,0,.8); }
+#let.hot { color: #FFD3A8; text-shadow: 0 2px 0 #FF8A4A, 0 4px 0 #F2783A, 0 6px 0 #E0662E, 0 8px 0 #CC5524, 0 10px 0 #B5461C, 0 12px 0 #9A3814, 0 0 60px rgba(255,110,60,.7), 0 26px 50px rgba(0,0,0,.8); }
+#let.long { font-size: 170px; }
+#chip.ans { border-color: #5FD38A; background: rgba(20,60,35,.85); color: #E9FFE9; }
+#chip { display: inline-block; margin-top: 18px; padding: 12px 36px; border-radius: 999px; background: rgba(20,13,8,.78); border: 3px solid #E0A84B; color: #F6E7C4; font-weight: 900; font-size: 50px; }
+#wait { display: block; width: fit-content; margin: 18px auto 0; padding: 12px 30px; border-radius: 999px; background: rgba(229,56,59,.25); border: 3px solid #FF6A4A; color: #FFE2D6; font-weight: 800; font-size: 40px; opacity: 0; }
+#reveal { position: absolute; top: 140px; left: 0; right: 0; text-align: center; }
+#reveal .row { font-weight: 900; font-size: 92px; line-height: 1.2; color: #F5EEDC; opacity: 0; text-shadow: 0 6px 26px rgba(0,0,0,.9); }
+#reveal .row b { color: #E0A84B; } #reveal .eq { color: #9C8A72; }
+#endq { position: absolute; top: 640px; left: 30px; right: 30px; text-align: center; font-weight: 900; font-size: 84px; line-height: 1.05; color: #F5EEDC; text-shadow: 0 6px 26px rgba(0,0,0,.9); opacity: 0; }
+#end2 { position: absolute; bottom: 330px; left: 30px; right: 30px; text-align: center; font-weight: 800; font-size: 46px; color: #F2C66B; text-shadow: 0 4px 18px rgba(0,0,0,.95); opacity: 0; }
+#lt { position: absolute; bottom: 150px; left: 0; right: 0; text-align: center; opacity: 0; }
+#lt .pill { display: inline-block; padding: 24px 46px; border-radius: 999px; background: rgba(22,17,13,.92); border: 3px solid #E0A84B; color: #F6E7C4; font-weight: 800; font-size: 42px; }
+#lt .sub { margin-top: 16px; font-weight: 700; font-size: 32px; color: #B9A78E; }
+</style></head><body>
+<div id="stage">
+  <canvas id="gl" width="1080" height="1920"></canvas>
+  <div id="topfade"></div><div id="vig"></div><div id="dim"></div>
+  <div id="title"><div id="piece"></div><div class="q" id="q"></div></div>
+  <div id="badge"><div id="let">A</div><br><div id="chip">Grade ?</div><div id="wait"></div></div>
+  <div id="reveal"></div>
+  <div id="endq"></div>
+  <div id="end2"></div>
+  <div id="lt"><div class="pill">🎹 Free practice plan &rarr; betweenlessons.org</div><div class="sub">Day 1 free &middot; or Google &ldquo;Between Lessons piano&rdquo;</div></div>
+  <div id="flash"></div>
+</div>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+<script type="module" src="./scene.js"></script>
+</body></html>

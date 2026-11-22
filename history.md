@@ -1,6 +1,9 @@
 # Posted videos (newest first). The daily run reads this to avoid repeating formats.
 | Date made | Format | Title | Project dir |
 |---|---|---|---|
+| 2026-11-22 | cartoon series (3 types part 4: pedal holder, no-warm-up, smart one) · Jingle Bells | 3 types of piano students PART 4 😭 #shorts | p4 |
+| 2026-11-22 | guess the grade (gtg) · Turkish March (Mozart) | Guess the grade: Turkish March 🎹 Grade 1 to 8 #shorts | tm |
+| 2026-11-22 | gets harder (lv) · Brahms' Lullaby | Brahms' Lullaby but it gets HARDER 😳 #shorts | lb |
 | 2026-11-21 | cartoon (missed a day: Max crams vs Zoe's plan waits) · Ode to Joy | Missed a practice day? Max vs Zoe 😱 #shorts | c4 |
 | 2026-11-21 | guess the song (lv) · Twinkle, Canon in D, Eine kleine Nachtmusik, Flight of the Bumblebee | Guess the song #4: Easy → Impossible 💀 #shorts | g4 |
 | 2026-11-21 | same melody, 4 left hands (lv) · Greensleeves | Same melody, 4 left hands: Greensleeves 🎹 #shorts | lh |
