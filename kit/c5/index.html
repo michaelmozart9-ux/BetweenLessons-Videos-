@@ -1,0 +1,41 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+@font-face { font-family: "Inter"; font-weight: 900; src: url("/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 800; src: url("/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 700; src: url("/node_modules/@fontsource/inter/files/inter-latin-700-normal.woff2") format("woff2"); }
+html, body { margin: 0; background: #F2E6D4; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "Inter"; }
+#gl { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+#chip { position: absolute; top: 230px; left: 50%; transform: translateX(-50%); white-space: nowrap; padding: 18px 34px; border-radius: 22px; background: rgba(28,26,30,.9); color: #FFFFFF; font-weight: 900; font-size: 54px; letter-spacing: .01em; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+#chip b { color: #5FD3C0; } #chip b.hot { color: #FF8A4A; }
+#cap { position: absolute; top: 1240px; left: 50%; transform: translateX(-50%); width: 980px; text-align: center; font-weight: 900; font-size: 78px; line-height: 1.1; color: #FFFFFF;
+  text-shadow: 0 0 2px #000, 0 4px 0 rgba(0,0,0,.55), 0 8px 24px rgba(0,0,0,.6); -webkit-text-stroke: 3px rgba(0,0,0,.65); paint-order: stroke fill; }
+#cap .cur { color: #FFD45C; }
+.ctr { position: absolute; top: 420px; left: 50%; transform: translateX(-50%); font-weight: 900; font-size: 240px; opacity: 0; -webkit-text-stroke: 6px rgba(0,0,0,.6); paint-order: stroke fill; text-shadow: 0 12px 40px rgba(0,0,0,.4); }
+#c4 { color: #FFFFFF; } #c20 { color: #FFD45C; }
+#src { position: absolute; bottom: 70px; left: 0; right: 0; text-align: center; font-weight: 700; font-size: 28px; color: rgba(40,30,22,.85); opacity: 0; }
+#illu { position: absolute; top: 330px; left: 0; right: 0; text-align: center; font-weight: 700; font-size: 28px; color: rgba(40,30,22,.85); opacity: 0; }
+#pill { position: absolute; bottom: 230px; left: 50%; transform: translateX(-50%); white-space: nowrap; padding: 26px 48px; border-radius: 999px; background: #14110E; border: 4px solid #E0A84B; color: #F6E7C4; font-weight: 900; font-size: 50px; opacity: 0; }
+#pill small { display: block; text-align: center; font-size: 32px; font-weight: 700; color: #B9A78E; margin-top: 6px; }
+#split { position: absolute; left: 0; right: 0; top: 955px; height: 10px; background: #1C1A1E; opacity: 0; }
+.side { position: absolute; left: 50%; transform: translateX(-50%); white-space: nowrap; padding: 12px 28px; border-radius: 999px; background: rgba(20,18,22,.85); color: #fff; font-weight: 900; font-size: 44px; opacity: 0; }
+#emo, #clap { position: absolute; top: 300px; left: 50%; transform: translateX(-50%); font-size: 200px; opacity: 0; }
+#clap { font-size: 130px; top: 470px; }
+#red { position: absolute; inset: 0; background: #FF2A2A; opacity: 0; mix-blend-mode: multiply; }
+#rw { position: absolute; top: 960px; left: 50%; transform: translate(-50%,-50%); white-space: nowrap; padding: 22px 40px; background: #1C1A1E; color: #FFF; font-weight: 900; font-size: 76px; border-radius: 18px; opacity: 0; border: 4px solid #FFD45C; }
+#scan { position: absolute; inset: 0; opacity: 0; background-image: repeating-linear-gradient(0deg, rgba(0,0,0,.18) 0 4px, rgba(255,255,255,0) 4px 10px); mix-blend-mode: multiply; }
+#flash { position: absolute; inset: 0; background: #FFFFFF; opacity: 0; }
+</style></head><body>
+<div id="stage">
+  <canvas id="gl" width="720" height="1280"></canvas>
+  <div id="split"></div>
+  <div id="chip"></div>
+  <div class="side" id="mx" style="top:520px"></div><div class="side" id="zt" style="top:1480px"></div>
+  <div id="emo">😬</div><div id="clap">👏👏👏</div>
+  <div id="cap"></div>
+  <div id="pill">🎹 betweenlessons.org<small>Type your piece in → Day 1 free, no card</small></div>
+  <div id="scan"></div><div id="rw">⏪ 7 DAYS EARLIER</div><div id="red"></div><div id="flash"></div>
+</div>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+<script type="module" src="./scene.js"></script>
+</body></html>

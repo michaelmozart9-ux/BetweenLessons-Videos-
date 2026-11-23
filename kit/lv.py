@@ -5,14 +5,15 @@ from plib import *
 def hands(nn, split=60):
     return [(m, b, d, ("L" if m < split else "R") if h == "A" else h, v) for m, b, d, h, v in nn]
 
-def make(HERE, levels, final_beat, ui, answers=False, kicks=None, url_after=1.0, sfx=None):
+def make(HERE, levels, final_beat, ui, answers=False, kicks=None, url_after=1.0, sfx=None, tail=3.3, plan=None):
+    """plan: dict for plan.js phone (its 'at' is seconds after the final chord); tail: seconds after the chord"""
     """levels: [(notes, units, bpm, pedal)]; kicks: {section_index: [beats]}"""
     rng = np.random.default_rng(11); notes = []; secs = []; t = 0.0; ids = "abcd"; t0s = []; reveal = []
     for i, (nn, units, bpm, pedal) in enumerate(levels):
         q = 60 / bpm; t0 = t + (0.06 if i == 0 else 0.0); last = i == 3; t0s.append((t0, q))
         notes += place(hands(nn), bpm, t0, ids[i], pedal=pedal, rng=rng, final_beat=(final_beat if last else None))
         end = t0 + units * q
-        if last: CHORD = t0 + final_beat * q; end = CHORD + 3.3
+        if last: CHORD = t0 + final_beat * q; end = CHORD + tail
         secs.append({"id": ids[i], "start": round(t, 3), "end": round(end, 3)}); reveal.append(round((CHORD if last else end) - 0.7, 3)); t = end
     DUR = round(t, 2); secs[-1]["end"] = DUR
     mix = reverb(render(notes, DUR, {s["id"]: s["end"] for s in secs}), wet=0.22)
@@ -29,6 +30,7 @@ def make(HERE, levels, final_beat, ui, answers=False, kicks=None, url_after=1.0,
     nrows = len(ui.get("rows", []))
     for i in range(nrows): add(mix, ding([1046.5, 1318.5, 1568.0, 2093.0, 2637.0][i % 5], 0.9), CHORD + 0.25 + i * 0.3, 0.028 + 0.003 * i)
     URL = secs[1]["start"] + url_after; add(mix, pop(1200), URL, 0.035)
+    if plan: plan = dict(plan, at=round(CHORD + plan['at'], 3)); ui = dict(ui, plan=plan); add(mix, whoosh(0.4), plan['at'] - 0.2, 0.012); add(mix, pop(1300), plan['at'] + 0.3, 0.03)
     master(mix, DUR, f"{HERE}/audio.wav", fade=0.25)
     ui = dict(ui, chord=round(CHORD, 3), url=round(URL, 3), lt=round(CHORD, 3), revealAt=(reveal if answers else None))
     json.dump({"duration": DUR, "fps": 30, "secs": secs, "notes": notes, "ui": ui}, open(f"{HERE}/timing.json", "w"))

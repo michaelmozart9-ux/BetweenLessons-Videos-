@@ -1,6 +1,9 @@
 # Posted videos (newest first). The daily run reads this to avoid repeating formats.
 | Date made | Format | Title | Project dir |
 |---|---|---|---|
+| 2026-11-23 | cartoon (what do I practise? Max guesses vs Zoe's session plan) · Minuet in G | What do I even practise?! Max vs Zoe 🤔 #shorts | c5 |
+| 2026-11-23 | wrong vs right, product-led (xv-style lv) · Für Elise | Stop practising Für Elise like this ❌ #shorts | fx |
+| 2026-11-23 | but epic (lv) · Morning Mood (Grieg) | Morning Mood but it gets EPIC 🌅🔥 #shorts | mo |
 | 2026-11-22 | cartoon series (3 types part 4: pedal holder, no-warm-up, smart one) · Jingle Bells | 3 types of piano students PART 4 😭 #shorts | p4 |
 | 2026-11-22 | guess the grade (gtg) · Turkish March (Mozart) | Guess the grade: Turkish March 🎹 Grade 1 to 8 #shorts | tm |
 | 2026-11-22 | gets harder (lv) · Brahms' Lullaby | Brahms' Lullaby but it gets HARDER 😳 #shorts | lb |
