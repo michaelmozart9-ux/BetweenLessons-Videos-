@@ -24,6 +24,13 @@ Michael runs Between Lessons (betweenlessons.org): an AI 6-week piano practice p
 - Render: start server in the SAME command: `(python3 -m http.server 8791 --bind 127.0.0.1 >/dev/null 2>&1 &) ; sleep 1; env PORT=8791 GL=swiftshader node render.mjs <dir> test|full|sheet` (START/END env for frame ranges; run 2 workers in parallel). Keyboard range is MIDI 36–84. Check test frames/sheet visually before full render.
 - Encode: `python3 encode.py <dir> out/<name>.mp4` (8–20 s, 1080x1920).
 
+## Promotion rules (Michael: "lots of views but they don't promote it well")
+- The product must be PART of the payoff, not just an end card. Every video shows the Between Lessons phone UI (plan screen: today's session, Warm-up / Main work / Run-through, tempo target %/BPM, weekly milestone) for at least 2-3 s BEFORE the final second, tied to the video's topic (e.g. after "Grade 8 version" show "Your plan for this piece: Week 1, 40% tempo"; cartoon: the character who wins is shown using the plan).
+- 1 of the 3 daily videos is product-led: a real practice problem (stuck bar, no time, missed day, don't know where to start) solved on screen by a real feature.
+- Pitch = a specific reason, not generic: "Want to play this? Type the piece in, get a free Day 1 plan" instead of "check out Between Lessons".
+- Caption first line is the hook; second line is the offer with "Day 1 free, no card"; keep #ad.
+- Aim the hook at people who play or are learning piano (problems, grades, practice), not only general music fans. They are the buyers.
+
 ## Daily run (fires 7:31pm Europe/Dublin)
 1. Read history.md. Make 3 NEW videos for TOMORROW, each a different format, none repeating the last 2 days' formats or pieces. Mix: 1 cartoon (series "3 types of piano students PART N" or a new relatable cartoon), 2 piano formats. Hook in first second, payoff before 15 s, short Between Lessons pitch at the end.
 2. Render, check sheets, encode.
