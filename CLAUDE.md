@@ -31,6 +31,14 @@ Michael runs Between Lessons (betweenlessons.org): an AI 6-week piano practice p
 - Caption first line is the hook; second line is the offer with "Day 1 free, no card"; keep #ad.
 - Aim the hook at people who play or are learning piano (problems, grades, practice), not only general music fans. They are the buyers.
 
+## Funnel rules (Michael, 24 Nov: videos must actually send people to the website)
+Views are not the goal; visits to betweenlessons.org/plan/new are. Captions on IG/TikTok are not clickable, YouTube descriptions are.
+- YouTube description: FIRST line is the full link `https://betweenlessons.org/plan/new?src=yt-<video-slug>` with a reason, e.g. "Get your free Day 1 plan for this piece 👉 https://betweenlessons.org/plan/new?src=yt-carol". Then the hook line, then #ad and hashtags. (The site tracks `src`.)
+- TikTok/Instagram captions: "Free Day 1 plan 👉 link in bio (betweenlessons.org)" on the first line.
+- On-screen end card (last 3 s, big): "Which grade are you? Free Day 1 plan" + "betweenlessons.org" and a "tap the link" cue. The plan phone UI must appear before the end card (see Promotion rules).
+- Every video asks a grade question ("Which grade are you?") so viewers who play identify themselves; those are the buyers.
+- Tell Michael in the daily message to pin the comment "Free Day 1 plan for this piece 👉 betweenlessons.org/plan/new" on each video (and keep link in bio set); he does this by hand.
+
 ## Daily run (fires 7:31pm Europe/Dublin)
 1. Read history.md. Make 3 NEW videos for TOMORROW, each a different format, none repeating the last 2 days' formats or pieces. Mix (from YouTube data 24 Nov): NO cartoons (last 6 cartoons got 0-24 views each), NO nursery/kids songs (Twinkle 24, Deck 49, Mary 45), NO talking/explainer videos (8-16 views). Use the formats that get 1-4k views: "Grade 1 vs Grade 8 <famous classical/Christmas piece>", "Guess the grade", "<famous piece> but it gets EPIC", "Guess the song: Easy to Impossible". Famous pieces only (Carol of the Bells, Beethoven 5th, Mountain King, Turkish March, Canon, Moonlight, Für Elise, Happy Birthday...). Grade formats are preferred: they attract learners and tie to the product ("Which grade are you? Get a plan for your grade"). Hook in first second, payoff before 15 s, short Between Lessons pitch at the end.
 2. Render, check sheets, encode.
