@@ -18,6 +18,8 @@ Michael runs Between Lessons (betweenlessons.org): an AI 6-week piano practice p
 - Load the `piano-shorts-video` skill if it is listed.
 - Each video is a folder (copy the closest existing one): build.py writes audio.wav + timing.json; index.html + scene.js draw it.
   - lv.py `make(HERE, levels, final_beat, ui, ...)`: "X but it gets harder" (levels a–d). Examples: ml2.
+  - FUNNEL TEMPLATE: copy cg/ (or g5, mk): lv scene + plan phone + big end card (`ec=3.8, tail=6.8, plan={'at':1.0,...}` → plan 2.8 s, then 3 s "Which grade are you? / betweenlessons.org / Tap the link").
+  - Render tip: only 2 CPUs; long renders must be launched with `setsid nohup ... &` or a shell timeout kills them.
   - gtg.py `make(HERE, piece, levels, final_beat, grades)`: "Guess the grade". Example: fe.
   - Cartoon family (k3, p2, p3, c1, c2): low-poly characters, captions from timing.json. c1/base.js is shared.
   - Others: gc/g3 guess the song, cb/ml "but epic", xv wrong vs right, how/ad* phone-UI ads.

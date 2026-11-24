@@ -1,6 +1,9 @@
 # Posted videos (newest first). The daily run reads this to avoid repeating formats.
 | Date made | Format | Title | Project dir |
 |---|---|---|---|
+| 2026-11-24 | Grade 1 vs Grade 8 (lv, grade levels 1/3/5/8) + plan phone + end card · Carol of the Bells | Carol of the Bells: Grade 1 vs Grade 8 🔔 #shorts | cg |
+| 2026-11-24 | guess the song Easy → Impossible (lv) · Happy Birthday, Beethoven 5th, The Entertainer, Moonlight 3rd mvt | Guess the song #5: Easy → Impossible 💀 #shorts | g5 |
+| 2026-11-24 | tempo ladder 40→60→80→100%, product-led (tempo target, Too easy +5%) · Hall of the Mountain King | Can't play Mountain King fast? Don't start at 100% 👹 #shorts | mk |
 | 2026-11-23 | cartoon (what do I practise? Max guesses vs Zoe's session plan) · Minuet in G | What do I even practise?! Max vs Zoe 🤔 #shorts | c5 |
 | 2026-11-23 | wrong vs right, product-led (xv-style lv) · Für Elise | Stop practising Für Elise like this ❌ #shorts | fx |
 | 2026-11-23 | but epic (lv) · Morning Mood (Grieg) | Morning Mood but it gets EPIC 🌅🔥 #shorts | mo |
