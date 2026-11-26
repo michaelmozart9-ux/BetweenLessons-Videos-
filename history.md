@@ -1,6 +1,9 @@
 # Posted videos (newest first). The daily run reads this to avoid repeating formats.
 | Date made | Format | Title | Project dir |
 |---|---|---|---|
+| 2026-11-26 | same tune, 4 left hands by grade 1/3/5/8 (lv) + plan phone + end card · Ode to Joy | Ode to Joy: Grade 1 vs Grade 8 left hand 🎹 #shorts | oj |
+| 2026-11-26 | but epic (lv) + plan phone + end card · Silent Night | Silent Night but it gets EPIC 🌟🔥 #shorts | sn |
+| 2026-11-26 | one 20-min session: Warm-up / Main work / Run-through → goal, product-led (session length) · Für Elise | Only 20 min a day? Learn Für Elise like this ⏱️ #shorts | fq |
 | 2026-11-25 | guess the grade (lv answers, A–D → Grade 1/3/5/8) + plan phone + end card · Canon in D | Guess the grade: Canon in D 🎻 Grade 1 to 8 #shorts | cn |
 | 2026-11-25 | gets harder (lv, levels 1–4) + plan phone + end card · Eine kleine Nachtmusik | Eine kleine Nachtmusik but it gets HARDER 😳 #shorts | ek |
 | 2026-11-25 | hands-separate ladder RH → LH → together slow → full, product-led (hands separate) · Turkish March | Turkish March falls apart hands together? Do this 😩 #shorts | ts |
