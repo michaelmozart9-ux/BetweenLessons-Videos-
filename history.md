@@ -1,6 +1,9 @@
 # Posted videos (newest first). The daily run reads this to avoid repeating formats.
 | Date made | Format | Title | Project dir |
 |---|---|---|---|
+| 2026-11-27 | guess the grade (lv answers, A–D → Grade 1/3/5/8) + plan phone + end card · Jingle Bells | Guess the grade: Jingle Bells 🔔 Grade 1 to 8 #shorts | jg |
+| 2026-11-27 | guess the grade (lv answers, A–D → Grade 1/3/5/8) + plan phone + end card · Happy Birthday | Guess the grade: Happy Birthday 🎂 Grade 1 to 8 #shorts | hbg |
+| 2026-11-27 | guess the song Easy → Impossible (lv) + plan phone + end card · Mountain King, Swan Lake, Carol of the Bells, Bach Toccata in D minor | Guess the song #6: Easy → Impossible 💀 #shorts | g6 |
 | 2026-11-26 | same tune, 4 left hands by grade 1/3/5/8 (lv) + plan phone + end card · Ode to Joy | Ode to Joy: Grade 1 vs Grade 8 left hand 🎹 #shorts | oj |
 | 2026-11-26 | but epic (lv) + plan phone + end card · Silent Night | Silent Night but it gets EPIC 🌟🔥 #shorts | sn |
 | 2026-11-26 | one 20-min session: Warm-up / Main work / Run-through → goal, product-led (session length) · Für Elise | Only 20 min a day? Learn Für Elise like this ⏱️ #shorts | fq |
